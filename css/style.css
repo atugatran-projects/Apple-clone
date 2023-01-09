@@ -6,6 +6,7 @@
 /* Comman css */
 li {
     list-style: none;
+    color: #f5f5f7;
 }
 
 /* Navbar */
@@ -33,13 +34,17 @@ nav .logo {
     background-position: center;
 }
 
-nav ul {
+nav .form {
+    display: none;
+}
+
+nav .list {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-nav ul li {
+nav .list li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,6 +58,10 @@ nav ul li {
 .search {
     width: 40px;
     height: 40px;
+    position: relative;
+    top: -3px;
+    left: 10px;
+    cursor: pointer;
     background-size: 15px 88px;
     background-repeat: no-repeat;
     background-image: url(../image/search.svg);
@@ -63,6 +72,7 @@ nav ul li {
     height: 40px;
     background-size: 20px 40px;
     background-repeat: no-repeat;
+    cursor: pointer;
     background-image: url(../image/bag.svg);
     background-position: center center;
 }
@@ -72,8 +82,96 @@ nav ul li {
         justify-content: space-between;
     }
 
-    nav ul {
+    nav .list,
+    .search,
+    .is-active2 .bag {
         display: none;
+    }
+
+    .is-active2 form .form-search .search {
+        display: block;
+        position: relative;
+        top: 38px;
+    }
+
+    .is-active2 .logo {
+        position: absolute;
+        left: 47.5vw;
+        top: 2px;
+    }
+
+    .is-active2 {
+        background: rgb(2 2 2);
+        border-bottom: 2px solid #424245;
+        height: 99px;
+        color: #f5f5f7;
+        align-items: flex-start;
+    }
+
+    .is-active2 form {
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        width: 100vw;
+        height: 40px;
+        margin-top: 50px;
+        position: absolute;
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: center;
+    }
+
+    .is-active2 .form-search {
+        color: #86868b;
+        cursor: text;
+        width: 90vw;
+        max-width: 588px;
+        top: -40px;
+        position: absolute;
+    }
+
+    .is-active2 .form-search input {
+        border: none;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        height: 2.21765em;
+        width: 100%;
+        font-size: 1rem;
+        color: #86868b;
+        outline: none;
+        background-color: #1d1d1f;
+        cursor: text;
+        padding-left: 30px;
+        display: block;
+        line-height: 2.11765em;
+        border-radius: 5px;
+    }
+
+    .is-active2 .list {
+        background: rgb(2 2 2);
+        color: #f5f5f7;
+        padding: 10px 0;
+        position: absolute;
+        width: 100vw;
+        top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .is-active2 .list li:nth-child(-n+9) {
+        border-bottom: 1px solid #424245;
+    }
+
+    .is-active2 .list li {
+        width: 90vw;
+        max-width: 588px;
+        height: 35px;
+        padding-top: 13px;
+        display: block;
+        background-size: 45px 45px;
+        font-size: 1rem;
     }
 
     /* Hamburger */
@@ -137,10 +235,6 @@ nav ul li {
 
     /* active */
 
-    .is-active {
-        margin-top: 15px;
-    }
-
     .is-active:hover {
         opacity: 0.7;
     }
@@ -157,4 +251,6 @@ nav ul li {
         transition: top 0.1s cubic-bezier(0.3, 0, 0.6, 0.3) 0.16s,
             transform 0.13s cubic-bezier(0.215, 0.61, 0.35, 1) 0.25s;
     }
+
+
 }
