@@ -3,25 +3,38 @@
     padding: 0;
 }
 
+:root {
+    --primary-color: #424245;
+    --secandary-color: #f5f5f7;
+    /* --black: #1d1d1f; */
+    --black: #000000;
+    --white: #fbfbfd;
+    --links: #2997ff;
+    ;
+
+}
+
 /* Comman css */
+
 li {
     list-style: none;
-    color: #f5f5f7;
+    color: var(--secandary-color);
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Navbar */
 nav {
-    width: 100vw;
+    width: 100%;
     height: 44px;
-    background-color: #424245;
+    background-color: var(--primary-color);
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #f5f5f7;
-}
-
-.nav-btn {
-    display: none;
+    color: var(--secandary-color);
 }
 
 nav .logo {
@@ -50,9 +63,14 @@ nav .list li {
     justify-content: center;
     font-size: 0.8rem;
     font-weight: 200;
-    color: #f5f5f7;
+    color: var(--secandary-color);
     cursor: pointer;
     margin: 0 0.8rem;
+}
+
+.nav-btn {
+    display: none !important;
+    z-index: 2;
 }
 
 .search {
@@ -77,6 +95,76 @@ nav .list li {
     background-position: center center;
 }
 
+/* Section Comman css */
+.Section_comman {
+    width: 100%;
+    height: 100vh;
+    background-size: 80% 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* iPhone 14 Pro */
+.section1 {
+    background-color: var(--black);
+    background-image: url(../image/iPhone\ 14\ pro.jpg);
+    color: var(--white);
+}
+
+.Section_1 .heading {
+    padding-top: 3.8rem;
+    font-size: 3.8rem;
+    line-height: 1.125;
+    font-weight: 600;
+    letter-spacing: .004em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.Section_1 .subHeading {
+    font-size: 1.8rem;
+    margin-top: 7px;
+    line-height: 1.21053;
+    font-weight: 400;
+    letter-spacing: 0em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.Section_1 .section1-links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+    align-content: center;
+    justify-content: center;
+}
+
+.Section_1 .section1-links .section1-link:nth-child(-n+1) {
+    margin-right: 20px;
+}
+
+.Section_1 .section1-links .section1-link,
+.Section_1 .section1-links .section1-link a {
+    font-family: "SF Pro Icons";
+    font-size: 1.3rem;
+    color: var(--links);
+    margin-right: 6px;
+}
+
+.Section_1 .section1-links .section1-link a:hover {
+    text-decoration: underline;
+}
+
+/* iPhone 14*/
+.section2 {
+    background-color: var(--white);
+    background-image: url(../image/iPhone\ 14.jpg);
+    color: var(--black);
+}
+
 @media screen and (max-width: 855px) {
     nav {
         justify-content: space-between;
@@ -94,17 +182,18 @@ nav .list li {
         top: 38px;
     }
 
+
     .is-active2 .logo {
         position: absolute;
-        left: 47.5vw;
+        left: 49.2%;
         top: 2px;
     }
 
     .is-active2 {
-        background: rgb(2 2 2);
-        border-bottom: 2px solid #424245;
+        background: var(--black);
+        border-bottom: 2px solid var(--primary-color);
         height: 99px;
-        color: #f5f5f7;
+        color: var(--secandary-color);
         align-items: flex-start;
     }
 
@@ -122,8 +211,7 @@ nav .list li {
     }
 
     .is-active2 .form-search {
-        color: #86868b;
-        cursor: text;
+        color: var(--primary-color);
         width: 90vw;
         max-width: 588px;
         top: -40px;
@@ -137,9 +225,9 @@ nav .list li {
         height: 2.21765em;
         width: 100%;
         font-size: 1rem;
-        color: #86868b;
+        color: var(--primary-color);
         outline: none;
-        background-color: #1d1d1f;
+        background-color: var(--black);
         cursor: text;
         padding-left: 30px;
         display: block;
@@ -148,20 +236,21 @@ nav .list li {
     }
 
     .is-active2 .list {
-        background: rgb(2 2 2);
-        color: #f5f5f7;
-        padding: 10px 0;
+        background: var(--black);
+        color: var(--secandary-color);
+        padding: 20px 0;
         position: absolute;
         width: 100vw;
+        height: calc(100vh - 99px);
         top: 100px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .is-active2 .list li:nth-child(-n+9) {
-        border-bottom: 1px solid #424245;
+        border-bottom: 1px solid var(--primary-color);
     }
 
     .is-active2 .list li {
@@ -177,16 +266,18 @@ nav .list li {
     /* Hamburger */
     /* not-active */
     .nav-btn {
-        padding: 15px;
-        display: inline-block;
+        padding: 0 15px;
+        display: inline-block !important;
         cursor: pointer;
         transition-property: opacity, filter;
         transition-duration: 0.15s;
         transition-timing-function: linear;
         background-color: transparent;
-        border: 0px;
+        border: 0;
         margin: 0px;
         overflow: visible;
+        width: 50px;
+        height: 43px;
     }
 
     .hamburger-box {
@@ -210,7 +301,7 @@ nav .list li {
     }
 
     .hamburger-inner::after {
-        color: #f5f5f7;
+        color: var(--secandary-color);
         transition: top 0.2s cubic-bezier(0.3, 0.6, 0.6, 1) 0.2s,
             opacity 0.1s linear 0s;
     }
@@ -225,7 +316,7 @@ nav .list li {
     .hamburger-inner::before {
         width: 13px;
         height: 2px;
-        background-color: #f5f5f7;
+        background-color: var(--secandary-color);
         border-radius: 10px;
         position: absolute;
         transition-property: transform;
@@ -234,6 +325,9 @@ nav .list li {
     }
 
     /* active */
+    .is-active {
+        padding-top: 15px;
+    }
 
     .is-active:hover {
         opacity: 0.7;
@@ -251,6 +345,50 @@ nav .list li {
         transition: top 0.1s cubic-bezier(0.3, 0, 0.6, 0.3) 0.16s,
             transform 0.13s cubic-bezier(0.215, 0.61, 0.35, 1) 0.25s;
     }
+}
 
+@media screen and (max-width: 768px) {
+    .Section_1 {
+        height: calc(70vh - 44px);
+        background-size: 100vw 85%;
+    }
 
+    .Section_1 .heading {
+        padding-top: 4rem;
+        font-size: 2.8rem;
+    }
+
+    .section2 .heading {
+        padding-top: 2rem;
+    }
+
+    .Section_1 .section1-links .section1-link,
+    .Section_1 .section1-links .section1-link a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .Section_1 .heading {
+        font-size: 2rem;
+    }
+
+    .Section_1 .subHeading {
+        font-size: 1rem;
+    }
+
+    .Section_1 .section1-links .section1-link,
+    .Section_1 .section1-links .section1-link a {
+        font-size: 0.8rem;
+    }
+
+    .Section_1 {
+        height: calc(65vh - 44px);
+    }
+}
+
+@media screen and (max-width: 300px) {
+    body {
+        display: none;
+    }
 }
