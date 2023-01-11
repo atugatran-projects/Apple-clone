@@ -6,8 +6,8 @@
 :root {
     --primary-color: #424245;
     --secandary-color: #f5f5f7;
-    /* --black: #1d1d1f; */
-    --black: #000000;
+    --black: #1d1d1f;
+    --Dblack: #000000;
     --white: #fbfbfd;
     --links: #2997ff;
     ;
@@ -40,7 +40,7 @@ nav {
 nav .logo {
     width: 40px;
     height: 40px;
-    background-size: 45px 45px;
+    background-size: 20px 20px;
     background-repeat: no-repeat;
     background-image: url(../image/logo.svg);
     background-repeat: no-repeat;
@@ -110,7 +110,7 @@ nav .list li {
 
 /* iPhone 14 Pro */
 .section1 {
-    background-color: var(--black);
+    background-color: var(--Dblack);
     background-image: url(../image/iPhone\ 14\ pro.jpg);
     color: var(--white);
 }
@@ -162,9 +162,22 @@ nav .list li {
 .section2 {
     background-color: var(--white);
     background-image: url(../image/iPhone\ 14.jpg);
-    color: var(--black);
+    color: var(--Dblack);
 }
 
+/* Apple Watch */
+.section3 {
+    background-color: var(--Dblack);
+    background-image: url(../image/watch.jpg);
+    color: var(--white);
+}
+.Watch_heading{
+    background-image: url(../image/watch_logo.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 100%;
+    height: 10rem;
+}
 @media screen and (max-width: 855px) {
     nav {
         justify-content: space-between;
@@ -179,7 +192,7 @@ nav .list li {
     .is-active2 form .form-search .search {
         display: block;
         position: relative;
-        top: 38px;
+        top: 36px;
     }
 
 
@@ -190,7 +203,7 @@ nav .list li {
     }
 
     .is-active2 {
-        background: var(--black);
+        background: var(--Dblack);
         border-bottom: 2px solid var(--primary-color);
         height: 99px;
         color: var(--secandary-color);
@@ -236,7 +249,7 @@ nav .list li {
     }
 
     .is-active2 .list {
-        background: var(--black);
+        background: var(--Dblack);
         color: var(--secandary-color);
         padding: 20px 0;
         position: absolute;
@@ -344,5 +357,8 @@ nav .list li {
         transform: rotate(90deg);
         transition: top 0.1s cubic-bezier(0.3, 0, 0.6, 0.3) 0.16s,
             transform 0.13s cubic-bezier(0.215, 0.61, 0.35, 1) 0.25s;
+    }
+    .Section_comman {
+        height: 35rem;
     }
 }
