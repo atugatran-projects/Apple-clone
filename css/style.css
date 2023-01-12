@@ -95,14 +95,21 @@ nav .list li {
     background-position: center center;
 }
 
+main {
+    width: 100%;
+    height: min-content;
+}
+
 /* Section Comman css */
-.Section_comman {
+.Section_comman,
+.Csection_2 {
     width: 100%;
     height: 40rem;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: bottom;
     display: flex;
+
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -114,9 +121,13 @@ nav .list li {
     background-image: url(../image/iPhone\ 14\ pro.jpg);
     color: var(--white);
 }
-
-.Section_1 .heading {
+.section1 .heading {
     padding-top: 5rem;
+}
+
+.heading {
+    text-align: center;
+    padding-top: 2rem;
     font-size: 2rem;
     line-height: 1.125;
     font-weight: 600;
@@ -124,16 +135,20 @@ nav .list li {
     font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
-.Section_1 .subHeading {
+.subHeading {
+    text-align: center;
     font-size: 1.5rem;
-    margin-top: 7px;
+    margin-top: 0.1rem;
     line-height: 1.21053;
+    width: 20rem;
+    text-align: center;
     font-weight: 400;
     letter-spacing: 0em;
     font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
-.Section_1 .section1-links {
+.section1-links {
+    text-align: center;
     width: 100%;
     display: flex;
     align-items: center;
@@ -142,19 +157,20 @@ nav .list li {
     justify-content: center;
 }
 
-.Section_1 .section1-links .section1-link:nth-child(-n+1) {
+.section1-links .section1-link:nth-child(-n+1) {
     margin-right: 20px;
 }
 
-.Section_1 .section1-links .section1-link,
-.Section_1 .section1-links .section1-link a {
+.section1-links .section1-link,
+.section1-links .section1-link a {
     font-family: "SF Pro Icons";
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--links);
     margin-right: 6px;
+    font-weight: 500;
 }
 
-.Section_1 .section1-links .section1-link a:hover {
+.section1-links .section1-link a:hover {
     text-decoration: underline;
 }
 
@@ -171,13 +187,101 @@ nav .list li {
     background-image: url(../image/watch.jpg);
     color: var(--white);
 }
-.Watch_heading{
+
+.Watch_heading {
     background-image: url(../image/watch_logo.png);
     background-repeat: no-repeat;
     background-position: bottom;
     width: 100%;
     height: 10rem;
 }
+
+/* 2 Sections */
+.section_2 {
+    width: calc(100% - 24px);
+    height: 100%;
+    display: grid;
+    background-color: var(--secandary-color);
+    grid-gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 12px;
+    border-bottom: 12px solid var(--secandary-color);
+}
+
+.Csection_2 {
+    width: 100%;
+    height: 40rem;
+    border-bottom: 12px solid var(--secandary-color);
+}
+
+/* One */
+
+.cHeading {
+    background-size: 30% 45%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 100%;
+    height: 8rem;
+    margin-top: -2rem;
+    margin-bottom: 0.6rem;
+}
+
+.one {
+    background-color: var(--secandary-color);
+    background-image: url(../image/watch2.jpg);
+    background-size: cover !important;
+    color: var(--Dblack);
+}
+
+.section_2 .Watch2_heading {
+    background-image: url(../image/watch2_logo.png);
+}
+
+/* two */
+.two {
+    background-color: var(--primary-color);
+    background-image: url(../image/fitness.jpg);
+    background-size: cover !important;
+    color: var(--white);
+}
+
+.two .fitness_heading {
+    margin-top: -3rem;
+    background-image: url(../image/fitness_logo.png);
+    background-size: 30% 30%;
+}
+
+.two .subHeading {
+    width: 20rem;
+    text-align: center;
+}
+
+.two .section1-links .section1-link,
+.two .section1-links .section1-link a {
+    color: var(--secandary-color) !important;
+}
+
+/* three */
+.three {
+    background-color: var(--primary-color);
+    background-image: url(../image/gift.jpg);
+    background-size: cover !important;
+    color: var(--white);
+}
+
+.three .section1-links .section1-link,
+.three .section1-links .section1-link a {
+    color: var(--secandary-color);
+}
+
+/* four */
+.four {
+    background-color: var(--secandary-color);
+    background-image: url(../image/iPad.jpg);
+    background-size: cover !important;
+    color: var(--Dblack);
+}
+
 @media screen and (max-width: 855px) {
     nav {
         justify-content: space-between;
@@ -195,6 +299,12 @@ nav .list li {
         top: 36px;
     }
 
+    .section_2 {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+        padding: 0px;
+        width: 100%;
+    }
 
     .is-active2 .logo {
         position: absolute;
@@ -358,7 +468,14 @@ nav .list li {
         transition: top 0.1s cubic-bezier(0.3, 0, 0.6, 0.3) 0.16s,
             transform 0.13s cubic-bezier(0.215, 0.61, 0.35, 1) 0.25s;
     }
+
     .Section_comman {
         height: 35rem;
+    }
+}
+
+@media screen and (max-width: 319px) {
+    body {
+        display: none;
     }
 }
