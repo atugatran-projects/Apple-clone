@@ -109,7 +109,6 @@ main {
     background-repeat: no-repeat;
     background-position: bottom;
     display: flex;
-
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -121,6 +120,7 @@ main {
     background-image: url(../image/iPhone\ 14\ pro.jpg);
     color: var(--white);
 }
+
 .section1 .heading {
     padding-top: 5rem;
 }
@@ -208,7 +208,7 @@ main {
     border-bottom: 12px solid var(--secandary-color);
 }
 
-.Csection_2 {
+.Csection_2:nth-child {
     width: 100%;
     height: 40rem;
     border-bottom: 12px solid var(--secandary-color);
@@ -280,6 +280,28 @@ main {
     background-image: url(../image/iPad.jpg);
     background-size: cover !important;
     color: var(--Dblack);
+}
+
+/* fifth */
+.fifth {
+    background-color: var(--primary-color);
+    background-image: url(../image/airpods.jpg);
+    background-size: cover !important;
+    color: var(--secandary-color);
+}
+
+/* sixth */
+.sixth {
+    background-color: var(--secandary-color);
+    background-image: url(../image/card.jpg);
+    background-size: cover !important;
+    color: var(--Dblack);
+}
+
+.sixth .card_heading {
+    margin-top: -3rem;
+    background-image: url(../image/card_logo.png);
+    background-size: 20% 25%;
 }
 
 @media screen and (max-width: 855px) {
