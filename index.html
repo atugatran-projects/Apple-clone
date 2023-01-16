@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="image/favicon.png">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <title>Apple</title>
 </head>
 
@@ -201,8 +203,262 @@
                 </div>
             </section>
         </section>
+        <!--? Slider -->
+        <section class="slider_con">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"> <img src="image/slider/1.jpg" alt="img"> </div>
+                    <div class="swiper-slide"> <img src="image/slider/2.jpg" alt="img"> </div>
+                    <div class="swiper-slide"> <img src="image/slider/3.jpg" alt="img"> </div>
+                    <div class="swiper-slide"> <img src="image/slider/4.jpg" alt="img"> </div>
+                    <div class="swiper-slide"> <img src="image/slider/5.jpg" alt="img"> </div>
+                    <div class="swiper-slide"> <img src="image/slider/6.jpg" alt="img"> </div>
+                    <div class="swiper-slide"> <img src="image/slider/7.jpg" alt="img"> </div>
+                    <div class="swiper-slide"> <img src="image/slider/8.jpg" alt="img"> </div>
+                </div>
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div> -->
+            </div>
+        </section>
     </main>
-    <script src="js/script.js"></script>
+    <footer>
+        <section class="footer_top footer_comman">
+            <ul>
+                <li>1. Apple Fitness+ requires iPhone&nbsp;8 or later, or
+                    Apple&nbsp;Watch&nbsp;Series&nbsp;3 or later paired with iPhone&nbsp;6s or later. New
+                    subscribers only. $9.99/month after trial. Plan automatically renews until cancelled.
+                    Terms&nbsp;apply.
+                </li>
+                <li>A subscription is required for Apple&nbsp;Fitness+.
+                </li>
+                <li>Apple&nbsp;Fitness+ requires an iPhone&nbsp;8 or later with iOS&nbsp;16.1.
+                </li>
+                <li>Apple&nbsp;Fitness+ requires an Apple&nbsp;Watch Series&nbsp;3 or later. Available when paired
+                    with iPhone&nbsp;6s or later with iOS&nbsp;14.3 or&nbsp;later.
+                </li>
+                <li>Fitness app on Apple&nbsp;TV requires tvOS&nbsp;14.3 or&nbsp;later.
+                </li>
+                <li>Fitness app on iPad requires iPadOS&nbsp;14.3 or&nbsp;later.
+                </li>
+                <li>To get the newest features, make sure your devices are running the latest software&nbsp;version.
+                </li>
+                <li>To access and use all the features of Apple&nbsp;Card, you must add Apple&nbsp;Card to Wallet on
+                    an iPhone or iPad with the latest version of iOS or iPadOS. Update to the latest version by
+                    going to Settings &gt; General &gt; Software Update. Tap Download and&nbsp;Install.</li>
+                <li>Available for qualifying applicants in the United&nbsp;States.</li>
+                <li>Apple&nbsp;Card is issued by Goldman Sachs Bank USA, Salt&nbsp;Lake&nbsp;City&nbsp;Branch.</li>
+                <li>Learn more about how Apple&nbsp;Card applications are evaluated at support.apple.com/kb/HT209218.
+                </li>
+                <li>Major League Baseball trademarks and copyrights are used with
+                    permission of MLB Advanced Media, L.P. All rights reserved.
+                </li>
+            </ul>
+        </section>
+        <section class="footer-middle footer_comman">
+            <!--! 1 -->
+            <section class="Footer-first">
+                <ul>
+                    <li class="Footer-heading" onclick="plus1()">
+                        <p>Shop and Learn</p>
+                        <img src="image/plus.png" alt="cross" class="footer-icon">
+                    </li>
+                    <ol id="cross1" class="footer-show">
+                        <li>Store</li>
+                        <li>Mac</li>
+                        <li>iPad</li>
+                        <li>iPhone</li>
+                        <li>Watch</li>
+                        <li>AirPods</li>
+                        <li>TV & Home</li>
+                        <li>AirTag</li>
+                        <li>Accessories</li>
+                        <li>Gift Cards</li>
+                    </ol>
+                </ul>
+            </section>
+            <!--! 2  -->
+            <section class="footer-second">
+                <!--? 1  -->
+                <ul>
+                    <li class="Footer-heading" onclick="plus2()">
+                        <p>Services</p>
+                        <img src="image/plus.png" alt="cross" class="footer-icon">
+                    </li>
+                    <ol id="cross2" class="footer-hide">
+                        <li>Apple Music</li>
+                        <li>Apple TV+</li>
+                        <li>Apple Fitness+</li>
+                        <li>Apple News+</li>
+                        <li>Apple Arcade</li>
+                        <li>iCloud</li>
+                        <li>Apple One</li>
+                        <li>Apple Card</li>
+                        <li>Apple Books</li>
+                        <li>Apple Podcasts</li>
+                        <li>App Store</li>
+                    </ol>
+                </ul>
+                <!-- ? 2 -->
+                <ul>
+                    <li class="Footer-heading" onclick="plus3()">
+                        <p>Account</p>
+                        <img src="image/plus.png" alt="cross" class="footer-icon">
+                    </li>
+                    <ol id="cross3" class="footer-hide">
+                        <li>Manage Your Apple ID</li>
+                        <li>Apple Store Account</li>
+                        <li>iCloud.com</li>
+                    </ol>
+                </ul>
+            </section>
+            <!--! 3  -->
+            <section class="Footer-third">
+                <ul>
+                    <li class="Footer-heading" onclick="plus4()">
+                        <p>App Store</p>
+                        <img src="image/plus.png" alt="cross" class="footer-icon">
+                    </li>
+                    <ol id="cross4" class="footer-hide">
+                        <li>Find a store</li>
+                        <li>Genius Bar</li>
+                        <li>Today at Apple</li>
+                        <li>Apple Camp</li>
+                        <li>Apple Store App</li>
+                        <li>Refurbished and Clearance</li>
+                        <li>Financing</li>
+                        <li>Apple Trade In</li>
+                        <li>Order Status</li>
+                        <li>Shopping Help</li>
+                    </ol>
+                </ul>
+            </section>
+            <!--! 4  -->
+            <section class="Footer-fourth">
+                <!--? 1 -->
+                <ul>
+                    <li class="Footer-heading" onclick="plus5()">
+                        <p>For Business</p>
+                        <img src="image/plus.png" alt="cross" class="footer-icon">
+                    </li>
+                    <ol id="cross5" class="footer-hide">
+                        <li>Apple and Business</li>
+                        <li>Shop for Business</li>
+                    </ol>
+                </ul>
+                <!--? 2  -->
+                <ul>
+                    <li class="Footer-heading" onclick="plus6()">
+                        <p>For Education</p>
+                        <img src="image/plus.png" alt="cross" class="footer-icon">
+                    </li>
+                    <ol id="cross6" class="footer-hide">
+                        <li>Apple and Education</li>
+                        <li>Shop for K-12</li>
+                        <li>Shop for College</li>
+                    </ol>
+                </ul>
+                <!--? 3  -->
+                <ul>
+                    <li class="Footer-heading" onclick="plus7()">
+                        <p>For Healthcare</p>
+                        <img src="image/plus.png" alt="cross" class="footer-icon">
+                    </li>
+                    <ol id="cross7" class="footer-hide">
+                        <li>Apple in Healthcare</li>
+                        <li>Health on Apple Watch</li>
+                        <li>Health Records on iPhone</li>
+                    </ol>
+                </ul>
+                <!--? 4  -->
+                <ul>
+                    <li class="Footer-heading" onclick="plus8()">
+                        <p>For Government</p>
+                        <img src="image/plus.png" alt="cross" class="footer-icon">
+                    </li>
+                    <ol id="cross8" class="footer-hide">
+                        <li>Shop for Government</li>
+                        <li>Shop for Veterans and Military</li>
+                    </ol>
+                </ul>
+            </section>
+            <!--! 5  -->
+            <section class="Footer-fifth">
+                <!--? 1  -->
+                <ul>
+                    <li class="Footer-heading" onclick="plus9()">
+                        <p>Apple Values</p>
+                        <img src="image/plus.png" alt="cross" class="footer-icon">
+                    </li>
+                    <ol id="cross9" class="footer-hide">
+                        <li>Accessibility</li>
+                        <li>Education</li>
+                        <li>Environment</li>
+                        <li>Inclusion and Diversity</li>
+                        <li>Privacy</li>
+                        <li>Racial Equity and Justice</li>
+                        <li>Supplier Responsibility</li>
+                    </ol>
+                    <!-- ? 2 -->
+                    <ul>
+                        <li class="Footer-heading" onclick="plus10()">
+                            <p>About Apple</p>
+                            <img src="image/plus.png" alt="cross" class="footer-icon">
+                        </li>
+                        <ol id="cross10" class="footer-hide">
+                            <li>Newsroom</li>
+                            <li>Apple Leadership</li>
+                            <li>Career Opportunities</li>
+                            <li>Investors</li>
+                            <li>Ethics & Compliance</li>
+                            <li>Events</li>
+                            <li>Contact Apple</li>
+                        </ol>
+                    </ul>
+                </ul>
+            </section>
+        </section>
+        <section class="footer-bottom footer_comman">
+            <p>More ways to shop: Find an Apple Store or other retailer near you. Or call 1-800-MY-APPLE.</p>
+            <hr>
+            <ul class="footer-bottom_list">
+                <ol>
+                    <li>Copyright © 2023 Apple Inc. All rights reserved.</li>
+                    <li>Privacy Policy</li>
+                    <li class="footer-border">Terms of Use</li>
+                    <li class="footer-border">Sales and Refunds</li>
+                    <li class="footer-border">Legal</li>
+                    <li class="footer-border">Site Map</li>
+                </ol>
+                <li>United States</li>
+            </ul>
+        </section>
+    </footer>
+    <script defer src="js/script.js"></script>
+    <!-- Swiper JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- external link -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            }
+        });
+    </script>
 </body>
 
 </html>

@@ -10,13 +10,17 @@
     --Dblack: #000000;
     --white: #fbfbfd;
     --links: #2997ff;
+    --footer-border-color: #d2d2d7;
+    --footer-text-color: #6e6e73;
     ;
 
 }
 
 /* Comman css */
 
-li {
+li,
+ul,
+ol {
     list-style: none;
     color: var(--secandary-color);
 }
@@ -34,7 +38,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--secandary-color);
+    color: var(--footer-text-color);
+    z-index: 2;
 }
 
 nav .logo {
@@ -42,9 +47,10 @@ nav .logo {
     height: 40px;
     background-size: 20px 20px;
     background-repeat: no-repeat;
-    background-image: url(../image/logo.svg);
+    background-image: url(../image/svg/logo.svg);
     background-repeat: no-repeat;
     background-position: center;
+
 }
 
 nav .form {
@@ -82,7 +88,7 @@ nav .list li {
     cursor: pointer;
     background-size: 15px 88px;
     background-repeat: no-repeat;
-    background-image: url(../image/search.svg);
+    background-image: url(../image/svg/search.svg);
 }
 
 .bag {
@@ -91,7 +97,7 @@ nav .list li {
     background-size: 20px 40px;
     background-repeat: no-repeat;
     cursor: pointer;
-    background-image: url(../image/bag.svg);
+    background-image: url(../image/svg/bag.svg);
     background-position: center center;
 }
 
@@ -117,7 +123,7 @@ main {
 /* iPhone 14 Pro */
 .section1 {
     background-color: var(--Dblack);
-    background-image: url(../image/iPhone\ 14\ pro.jpg);
+    background-image: url(../image/bg-img/iPhone\ 14\ pro.jpg);
     color: var(--white);
 }
 
@@ -177,19 +183,19 @@ main {
 /* iPhone 14*/
 .section2 {
     background-color: var(--white);
-    background-image: url(../image/iPhone\ 14.jpg);
+    background-image: url(../image/bg-img/iPhone\ 14.jpg);
     color: var(--Dblack);
 }
 
 /* Apple Watch */
 .section3 {
     background-color: var(--Dblack);
-    background-image: url(../image/watch.jpg);
+    background-image: url(../image/bg-img/watch.jpg);
     color: var(--white);
 }
 
 .Watch_heading {
-    background-image: url(../image/watch_logo.png);
+    background-image: url(../image/logo/watch_logo.png);
     background-repeat: no-repeat;
     background-position: bottom;
     width: 100%;
@@ -228,26 +234,26 @@ main {
 
 .one {
     background-color: var(--secandary-color);
-    background-image: url(../image/watch2.jpg);
+    background-image: url(../image/bg-img/watch2.jpg);
     background-size: cover !important;
     color: var(--Dblack);
 }
 
 .section_2 .Watch2_heading {
-    background-image: url(../image/watch2_logo.png);
+    background-image: url(../image/logo/watch2_logo.png);
 }
 
 /* two */
 .two {
     background-color: var(--primary-color);
-    background-image: url(../image/fitness.jpg);
+    background-image: url(../image/bg-img/fitness.jpg);
     background-size: cover !important;
     color: var(--white);
 }
 
 .two .fitness_heading {
     margin-top: -3rem;
-    background-image: url(../image/fitness_logo.png);
+    background-image: url(../image/logo/fitness_logo.png);
     background-size: 30% 30%;
 }
 
@@ -264,7 +270,7 @@ main {
 /* three */
 .three {
     background-color: var(--primary-color);
-    background-image: url(../image/gift.jpg);
+    background-image: url(../image/bg-img/gift.jpg);
     background-size: cover !important;
     color: var(--white);
 }
@@ -277,7 +283,7 @@ main {
 /* four */
 .four {
     background-color: var(--secandary-color);
-    background-image: url(../image/iPad.jpg);
+    background-image: url(../image/bg-img/iPad.jpg);
     background-size: cover !important;
     color: var(--Dblack);
 }
@@ -285,7 +291,7 @@ main {
 /* fifth */
 .fifth {
     background-color: var(--primary-color);
-    background-image: url(../image/airpods.jpg);
+    background-image: url(../image/bg-img/airpods.jpg);
     background-size: cover !important;
     color: var(--secandary-color);
 }
@@ -293,15 +299,153 @@ main {
 /* sixth */
 .sixth {
     background-color: var(--secandary-color);
-    background-image: url(../image/card.jpg);
+    background-image: url(../image/bg-img/card.jpg);
     background-size: cover !important;
     color: var(--Dblack);
 }
 
 .sixth .card_heading {
     margin-top: -3rem;
-    background-image: url(../image/card_logo.png);
+    background-image: url(../image/logo/card_logo.png);
     background-size: 20% 25%;
+}
+
+/*? Swiper */
+.slider_con {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    max-height: 80vh;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* footer */
+
+footer {
+    width: 100%;
+    background-color: var(--secandary-color);
+}
+
+.footer_comman {
+    max-width: 80vw;
+    margin: auto;
+    padding: 5rem 0;
+    font-size: 0.89em;
+    padding: 17px 0 11px;
+}
+
+.footer_top {
+    border-bottom: 1px solid var(--footer-border-color);
+}
+
+.footer_top ul li {
+    font-size: 13px;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    color: var(--footer-text-color) !important;
+    font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.footer-middle {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.Footer-heading {
+    color: var(--Dblack) !important;
+    font-weight: bold;
+    margin-top: 1rem !important;
+}
+
+.footer-middle ul li {
+    color: var(--footer-text-color);
+    line-height: 1.9rem;
+}
+
+.footer-middle ul>li img {
+    display: none;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column !important;
+    align-items: flex-start;
+}
+
+.footer-bottom ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid var(--footer-border-color);
+    margin-top: 0.5em;
+    margin-bottom: 1rem;
+}
+
+.footer-bottom ul ol {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.footer-bottom ul li,
+.footer-bottom p {
+    color: var(--footer-text-color);
+}
+
+.footer-bottom ul li {
+    margin-top: 0.5em;
+}
+
+.footer-border{
+    border-left: 1px solid var(--footer-border-color);
+    padding-left: 0.6em;
+}
+
+@media screen and (max-width: 1024px) {
+    .footer_comman {
+        max-width: 95%;
+    }
 }
 
 @media screen and (max-width: 855px) {
@@ -336,7 +480,7 @@ main {
 
     .is-active2 {
         background: var(--Dblack);
-        border-bottom: 2px solid var(--primary-color);
+        border-bottom: 1px solid var(--primary-color);
         height: 99px;
         color: var(--secandary-color);
         align-items: flex-start;
@@ -493,6 +637,78 @@ main {
 
     .Section_comman {
         height: 35rem;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .footer-middle {
+        display: block;
+    }
+
+    .footer-middle ul>li {
+        border: none;
+        font-size: 0.98em;
+        font-weight: 600;
+        padding: 0 1em;
+    }
+
+    .footer-hide {
+        display: none !important;
+    }
+
+    .footer-show {
+        margin-left: 1rem;
+        margin-top: 0.6rem;
+
+    }
+
+    .footer-show li {
+        line-height: 5em;
+    }
+
+    .footer-middle ul>li{
+        border-bottom: 1px solid var(--footer-border-color);
+    }
+
+    .footer-middle ul>li img {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+    }
+
+    .Footer-heading {
+        color: var(--footer-text-color) !important;
+        font-weight: 600 !important;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        cursor: pointer;
+        align-items: center;
+    }
+
+    .Footer-heading:hover {
+        color: var(--Dblack) !important;
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: column !important;
+        align-items: flex-start;
+    }
+
+    .footer-bottom ul {
+        border: none !important;
+        flex-direction: column-reverse;
+    }
+
+    .footer-bottom ul ol {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        border: none !important;
+    }
+    .footer-bottom ul ol li {
+        margin: 0.8em 0.8em 0 0;
     }
 }
 
